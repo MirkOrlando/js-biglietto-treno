@@ -26,18 +26,24 @@ if (passenger_age < 18) {
     total_price = total_price - discount;
     document.getElementById('write_here').innerHTML = 
     `Che fortuna! In quanto minorenne hai diritto a uno sconto. 
-    Il costo del biglietto del treno è di ${total_price.toFixed(2).replace(".",",")} €. Buon viaggio!`;
+    Il costo del biglietto del treno è di ${total_price.toFixed(2).replace(".",",")} €.`;
+    document.getElementById('best_wishes').innerHTML =
+    `Grazie e buon viaggio!`
 } else if (passenger_age >= 65) {
     discount = total_price * over65_discount;
     total_price = total_price - discount;
     document.getElementById('write_here').innerHTML = 
     `Che fortuna! In quanto "over 65" hai diritto a uno sconto. 
-    Il costo del biglietto del treno è di ${total_price.toFixed(2).replace(".",",")} €. Buon viaggio!`;
+    Il costo del biglietto del treno è di ${total_price.toFixed(2).replace(".",",")} €.`;
+    document.getElementById('best_wishes').innerHTML =
+    `Grazie e buon viaggio!`
 } else if (isNaN(passenger_trip_km) || isNaN(passenger_age)) {
     document.getElementById('write_here').innerHTML = 
     `I dati inseriti non sono corretti. Cortesemente ricaricare la pagina.`;
 } else {
     document.getElementById('write_here').innerHTML = 
-    `Il costo del biglietto del treno è di ${total_price.toFixed(2).replace(".",",")} €. Buon viaggio!`;
+    `Il costo del biglietto del treno è di ${total_price.toFixed(2).replace(".",",")} €.`;
+    document.getElementById('best_wishes').innerHTML =
+    `Grazie e buon viaggio!`
 }
 
